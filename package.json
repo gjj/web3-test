@@ -2,23 +2,17 @@
   "name": "web3-test",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
-    "clean": "rimraf dist",
-    "prestart": "npm run clean && npm run build",
-    "start": "concurrently \"tsc -w\" \"func start --typescript\"",
-    "test": "echo \"No tests yet...\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "@azure/functions": "^4.0.0",
-    "ethers": "^6.11.1"
-  },
+  "keywords": [],
+  "author": "Jia Jian Goi",
+  "license": "MIT",
   "devDependencies": {
-    "@types/node": "^18.x",
-    "concurrently": "^8.2.2",
-    "rimraf": "^5.0.0",
     "typescript": "^5.4.2"
   },
-  "main": "dist/src/functions/*.js"
+  "dependencies": {
+    "ethers": "^6.11.1"
+  }
 }
