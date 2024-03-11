@@ -7,14 +7,16 @@
     "watch": "tsc -w",
     "clean": "rimraf dist",
     "prestart": "npm run clean && npm run build",
-    "start": "func start",
+    "start": "concurrently \"tsc -w\" \"func start --typescript\"",
     "test": "echo \"No tests yet...\""
   },
   "dependencies": {
-    "@azure/functions": "^4.0.0"
+    "@azure/functions": "^4.0.0",
+    "ethers": "^6.11.1"
   },
   "devDependencies": {
     "@types/node": "^18.x",
+    "concurrently": "^8.2.2",
     "rimraf": "^5.0.0",
     "typescript": "^5.4.2"
   },
